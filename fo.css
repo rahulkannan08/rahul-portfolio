@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    gap: 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+}
+
+.navbar a {
+    color: #fff;
+    background: #333;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+}
+
+.navbar a:hover, .navbar a:focus {
+    background: #fff;
+    color: #333;
+}
+
