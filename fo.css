@@ -63,7 +63,7 @@ body {
     position: relative;
     display: inline-block;
 }
-.project-card ::after {
+.project-card h3::after {
     content: "";
     display: block;
     position: absolute;
@@ -75,14 +75,39 @@ body {
     border-radius: 2px;
     transform: scaleX(0);
     transition: transform 0.3s ease;
-    transform-origin: left;
+    transform-origin: left; /* left to right */
 }
-.project-card :hover::after {
-    width: 100%;
+.project-card:hover h3::after {
+    transform: scaleX(1);
+}
+
+.project-card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 10px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right; /* right to left */
+}
+.project-card:hover::after {
     transform: scaleX(1);
 }   
 .project-card p {
     margin: 0;
     color: #444;
     font-size: 1rem;
+}
+.project-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.project-card a:hover {
+    text-decoration: underline;
 }
