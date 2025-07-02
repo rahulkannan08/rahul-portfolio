@@ -28,6 +28,28 @@
     color: #333;
 }
 
+
+.project-button {
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+    margin-top: 12px;
+    display: inline-block;
+}
+
+.project-button:hover, .project-button:focus {
+    background: #fff;
+    color: #333;
+    box-shadow: 0 4px 16px rgb(250, 0, 0);
+    transform: translateY(-2px) scale(1.04);
+    outline: none;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -75,7 +97,7 @@ body {
     border-radius: 2px;
     transform: scaleX(0);
     transition: transform 0.3s ease;
-    transform-origin: left; /* left to right */
+    transform-origin: left; 
 }
 .project-card:hover h3::after {
     transform: scaleX(1);
@@ -89,25 +111,79 @@ body {
     right: 20px;
     bottom: 10px;
     height: 3px;
-    background: #333;
+    background: #2b2323;
     border-radius: 2px;
     transform: scaleX(0);
     transition: transform 0.3s ease;
-    transform-origin: right; /* right to left */
+    transform-origin: right;
 }
 .project-card:hover::after {
     transform: scaleX(1);
 }   
 .project-card p {
     margin: 0;
-    color: #444;
+    color: #000000;
     font-size: 1rem;
 }
 .project-card a {
-    color: #007bff;
+    color: #0080ff;
     text-decoration: none;
     font-weight: bold;
 }
 .project-card a:hover {
     text-decoration: underline;
+}
+
+.resume-button{
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.resume-button:hover {
+    background: #fff;
+    color: #333;
+    box-shadow: 0 4px 16px rgb(250, 0, 0);
+    transform: translateY(-2px) scale(1.04);
+    outline: none;
+}
+
+
+@media (max-width: 900px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .project-card {
+    width: 90%;
+    min-width: 220px;
+  }
+  .navbar {
+    gap: 16px;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+  }
+  .navbar a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+  body {
+    padding-top: 90px; 
+  }
+  .project-card {
+    width: 98%;
+    padding: 12px;
+  }
 }
